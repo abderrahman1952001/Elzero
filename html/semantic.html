@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Page</title>
+</head>
+<body>
+    <header>
+        <h1>Semantic Page</h1>
+
+        <nav aria-label="Primary">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="home">
+        <aside aria-label="Sidebar">
+            <h2>Sidebar</h2>
+            <ul>
+                <li>Categories</li>
+                <li>Latest Posts</li>
+                <li>Popular Topics</li>
+                <li>Newsletter</li>
+                <li>Archives</li>
+            </ul>
+        </aside>
+
+        <section id="articles" aria-labelledby="articles-title">
+            <h2 id="articles-title">Latest Articles</h2>
+
+            <article>
+                <h3>Why Semantic HTML Matters</h3>
+                <img src="https://picsum.photos/seed/semantic/640/360" alt="Abstract layout blocks illustration" width="320">
+                <p>Semantic elements make your pages easier to understand for browsers, search engines, and assistive technologies.</p>
+                <a href="#articles">Read More</a>
+            </article>
+
+            <article>
+                <h3>Building a Simple Layout</h3>
+                <img src="https://picsum.photos/seed/layout/640/360" alt="A simple webpage layout illustration" width="320">
+                <p>Use <code>header</code>, <code>nav</code>, <code>main</code>, and <code>footer</code> to create a clear page structure.</p>
+                <a href="#articles">Read More</a>
+            </article>
+
+            <article>
+                <h3>Accessibility Basics</h3>
+                <img src="https://picsum.photos/seed/a11y/640/360" alt="Accessibility icons illustration" width="320">
+                <p>Add descriptive headings, meaningful link text, and landmarks like <code>nav</code> to improve navigation for everyone.</p>
+                <a href="#articles">Read More</a>
+            </article>
+        </section>
+
+        <section id="about">
+            <h2>About</h2>
+            <p>This page is a small practice project for semantic structure and basic content organization.</p>
+        </section>
+
+        <section id="resources">
+            <h2>Resources</h2>
+            <p>Try reading about semantic HTML elements and landmarks in the MDN documentation.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Reach out via email: <a href="mailto:hello@example.com">hello@example.com</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Semantic Page</p>
+    </footer>
+</body>
+</html>

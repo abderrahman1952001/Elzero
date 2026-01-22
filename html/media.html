@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Page</title>
+</head>
+<body>
+    
+    <section id="audio">
+        <h2>Audio</h2>
+
+        <figure>
+            <figcaption>Audio File 1 (autoplay + muted + loop)</figcaption>
+            <audio controls autoplay muted loop>
+                <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3" type="audio/mpeg">
+                <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.ogg" type="audio/ogg">
+                <source src="media/silence.wav" type="audio/wav">
+                Your browser does not support any of the provided audio formats (MP3, OGG, WAV).
+            </audio>
+        </figure>
+
+        <figure>
+            <figcaption>Audio File 2 (no autoplay)</figcaption>
+            <audio controls loop>
+                <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+                <source src="media/silence.wav" type="audio/wav">
+                Your browser does not support any of the provided audio formats (MP3, OGG, WAV).
+            </audio>
+        </figure>
+    </section>
+
+    <section id="video">
+        <h2>Video</h2>
+
+        <figure>
+            <figcaption>Video File 1 (autoplay + muted + loop)</figcaption>
+            <video controls autoplay muted loop playsinline width="480" poster="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA-7UIYLcEK1mAwct1XgW8aSMnvm3ZEQBYgQ&s">
+                <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+                <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm">
+                <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.ogv" type="video/ogg">
+                <track kind="captions" src="captions/video-1.en.vtt" srclang="en" label="English" default>
+                Your browser does not support any of the provided video formats (MP4, WebM, OGV).
+            </video>
+        </figure>
+
+        <figure>
+            <figcaption>Video File 2 (no autoplay)</figcaption>
+            <video controls muted loop width="480" poster="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA-7UIYLcEK1mAwct1XgW8aSMnvm3ZEQBYgQ&s">
+                <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+                <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm">
+                <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.ogv" type="video/ogg">
+                <track kind="captions" src="captions/video-2.en.vtt" srclang="en" label="English" default>
+                Your browser does not support any of the provided video formats (MP4, WebM, OGV).
+            </video>
+        </figure>
+    </section>
+
+</body>
+</html>
