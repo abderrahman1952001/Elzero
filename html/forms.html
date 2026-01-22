@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Page</title>
+</head>
+<body>
+    <form action="test.py" method="post" target="_blank">
+        <input type="hidden" name="csrf_token" value="b92f1fc2fce391ad7af633723afd3055">
+
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" placeholder="Enter your username" required autofocus minlength="5" maxlength="20">
+        <hr>
+
+        <label for="memberId">Member ID</label>
+        <input id="memberId" name="member_id" type="text" value="ELZERO-STUDENT-001" readonly>
+        <hr>
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" placeholder="Enter your password" required>
+        <hr>
+
+        <label for="mobile">Mobile</label>
+        <input
+            id="mobile"
+            name="mobile"
+            type="tel"
+            inputmode="numeric"
+            pattern="[0-9]{10,15}"
+            maxlength="15"
+            placeholder="Enter your mobile number (digits only)">
+        <hr>
+
+        <label for="email">Email</label>
+        <br>
+        <input id="email" name="email" type="email" placeholder="Enter your email address">
+        <hr>
+
+        <label for="subject">Subject</label>
+        <input id="subject" name="subject" type="text" placeholder="Enter the subject">
+        <hr>
+
+        <label for="startDate">Start Date</label>
+        <input id="startDate" name="start_date" type="date" required min="2020-01-01" max="2030-12-31">
+        <hr>
+
+        <label for="startTime">Start Time</label>
+        <input id="startTime" name="start_time" type="time" required min="09:00" max="18:00" step="900">
+        <hr>
+
+        <fieldset>
+            <legend>Programming Field</legend>
+            <label><input type="radio" name="programming_field" value="frontend" checked> Frontend</label>
+            <label><input type="radio" name="programming_field" value="backend"> Backend</label>
+            <label><input type="radio" name="programming_field" value="fullstack"> Full-Stack</label>
+        </fieldset>
+        <hr>
+
+        <fieldset>
+            <legend>Programming Languages</legend>
+            <label><input type="checkbox" name="languages[]" value="html" checked> HTML</label>
+            <label><input type="checkbox" name="languages[]" value="css"> CSS</label>
+            <label><input type="checkbox" name="languages[]" value="javascript"> JavaScript</label>
+            <label><input type="checkbox" name="languages[]" value="python"> Python</label>
+        </fieldset>
+        <hr>
+
+        <label for="reason">Why Are You Applying?</label>
+        <textarea id="reason" name="application_reason" rows="5" cols="40" placeholder="Write a short reason for applying..."></textarea>
+        <hr>
+
+        <label for="track">Preferred Track</label>
+        <select id="track" name="preferred_track">
+            <optgroup label="Web Development">
+                <option value="frontend">Frontend</option>
+                <option value="backend">Backend</option>
+                <option value="fullstack">Full-Stack</option>
+            </optgroup>
+            <optgroup label="Mobile Development">
+                <option value="android">Android</option>
+                <option value="ios">iOS</option>
+                <option value="flutter">Flutter</option>
+            </optgroup>
+            <optgroup label="Data">
+                <option value="data-analysis">Data Analysis</option>
+                <option value="data-engineering">Data Engineering</option>
+                <option value="machine-learning">Machine Learning</option>
+            </optgroup>
+        </select>
+        <hr>
+
+        <label for="experience">Experience Level</label>
+        <input id="experience" name="experience_level" type="range" min="1" max="5" step="1" value="3" list="experience-levels">
+        <output id="experienceLabel" for="experience">Intermediate</output>
+        <datalist id="experience-levels">
+            <option value="1" label="Beginner"></option>
+            <option value="2" label="Junior"></option>
+            <option value="3" label="Intermediate"></option>
+            <option value="4" label="Advanced"></option>
+            <option value="5" label="Expert"></option>
+        </datalist>
+        <script>
+            const experienceLevels = {
+                1: "Beginner",
+                2: "Junior",
+                3: "Intermediate",
+                4: "Advanced",
+                5: "Expert"
+            };
+            const experienceInput = document.getElementById("experience");
+            const experienceLabel = document.getElementById("experienceLabel");
+
+            function updateExperienceLabel() {
+                experienceLabel.textContent = experienceLevels[experienceInput.value] ?? experienceInput.value;
+            }
+
+            experienceInput.addEventListener("input", updateExperienceLabel);
+            updateExperienceLabel();
+        </script>
+        <hr>
+
+        <button type="submit">Submit Data</button>
+        <button type="reset">Clear Form</button>
+    </form>
+
+    <hr>
+    <h2>Extra Inputs Form</h2>
+
+    <form action="test.py" method="post" enctype="multipart/form-data" target="_blank">
+        <label for="website">Website</label>
+        <input id="website" name="website" type="url" placeholder="https://example.com">
+        <hr>
+
+        <label for="attachment">Upload File</label>
+        <input id="attachment" name="attachment" type="file">
+        <hr>
+
+        <label for="search">Search</label>
+        <input id="search" name="search" type="search" placeholder="Search...">
+        <hr>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Clear</button>
+    </form>
+</body>
+</html>
